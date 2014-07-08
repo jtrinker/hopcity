@@ -1,8 +1,17 @@
-//  load express and allow us to use it
+//  load packages and allow us to use them
 var express = require('express');
+var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
+var beer = require('./models/beer');
+
+// connect to MongoDB
+mongoose.createConnection('mongodb://jtrinker:Gretchen8@novus.modulusmongo.net:27017/ehiqyT6a');
 
 // create our express application
 var app = express();
+
+// use bodyParser in our application
+app.use(bodyParser());
 
 // define our server port
 var port = process.env.PORT || 3000;
