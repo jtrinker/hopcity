@@ -2,15 +2,15 @@
 var mongoose = require('mongoose');
 
 // beer schema -- maps to mongodb collection
-var BeerSchema = new mongoose.schema({
-  name: string,
-  brewery: string,
-  type: string,
-  abv: string,
-  limited: boolean,
-  seasonal: boolean,
-  local: boolean,
-  runningLow: boolean
+var BeerSchema = new mongoose.Schema({
+  name: String,
+  brewery: String,
+  type: String,
+  abv: String,
+  limited: Boolean,
+  seasonal: Boolean,
+  local: Boolean,
+  runningLow: Boolean
 });
 
 // export the mongoose model for use in our app
